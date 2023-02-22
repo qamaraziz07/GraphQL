@@ -23,6 +23,7 @@ const Signup = () => {
         userNew: formData,
       },
     });
+    setFormData(" ");
   };
   return (
     <div className="container my-container">

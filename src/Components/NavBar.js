@@ -8,7 +8,7 @@ export default function NavBar() {
     <nav>
       <div className="nav-wrapper light-blue ">
         <Link to="/" className="brand-logo left">
-          Text Generate
+          Quote Generate
         </Link>
         <ul id="nav-mobile" className="right">
           {token ? (

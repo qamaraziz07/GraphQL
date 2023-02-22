@@ -16,13 +16,13 @@ export default function Profile() {
     return (
         <div className="container my-container">
             <div className="center-align">
-                <img className="circle" style={{border:"2px solid",marginTop:"10px"}} src={`https://robohash.org/${data.user.firstName}.png?size=200x200`} alt="pic" />
-                <h5>{data.user.firstName} {data.user.lastName}</h5>
-                <h6>Email - {data.user.email}</h6>
+                <img className="circle" style={{border:"2px solid",marginTop:"10px"}} src={`https://robohash.org/${data?.user?.firstName}.png?size=200x200`} alt="pic" />
+                <h5>{data.user.firstName} {data?.user?.lastName}</h5>
+                <h6>Email - {data?.user?.email}</h6>
             </div>
              <h3>Your quotes</h3>
              {
-                 data.user.quotes.map(quo=>{
+                 data?.user?.quotes?.map(quo=>{
                      return(
                          <blockquote>
                             <h6>{quo.name}</h6>

@@ -2,6 +2,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_QUOTES } from "../GqlOperations/queries";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { loading, error, data } = useQuery(GET_ALL_QUOTES);
@@ -19,7 +20,8 @@ const Home = () => {
         return (
           <blockquote>
             <h6>{quote.name}</h6>
-            <p className="right-align">~{quote.by.firstName}</p>
+            <Link to={`/profile/${quote?.by?._id}`}>
+              <p className="right-align">~{quote?.by?.firstName}</p></Link>
           </blockquote>
         );
       })}
